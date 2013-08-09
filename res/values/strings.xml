@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2013 FMSoft (http://www.fmsoft.cn)
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+
+<resources>
+    <string name="app_name">Clock</string>
+    <string name="world_clock">World Clock</string>
+    <string name="alarm">Alarm</string>
+    <string name="stopwatch">Stopwatch</string>
+    <string name="timer">Timer</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="lap">Lap</string>
+    <string name="cancel">Cancel</string>
+    <string name="lap_prefix">"lap "</string>
+    <string name="continues">continue</string>
+    <string name="hour">hours</string>
+    <string name="minutes">mins</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="repeat">Repeat</string>
+    <string name="monday">Every Monday</string>
+    <string name="tuesday">Every TuesDay</string>
+    <string name="wendesday">Every Wendesday</string>
+    <string name="thursday">Every Thursday</string>
+    <string name="friday">Every Friday</string>
+    <string name="staturday">Every Saturday</string>
+    <string name="sunday">Every Sunday</string>
+    <string name="returns">Back</string>
+    <string name="every_day">every day</string>
+    <string name="alarm_alert_snooze_text">Caulk Off</string>
+    <string name="alarm_alert_dismiss_text">Dismiss</string>
+    <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: special case for when
+         the alarm is set to never repeat -->
+    <string name="never">Never</string>
+
+
+
+    <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: concatenate days with
+         this character, i.e. "Mon, Tue, Wed" -->
+    <string name="day_concat">", "</string>
+    <!-- Default label to display for an alarm -->
+    <string name="default_label">Alarm</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="download">Download</string>
+    <string name="edit">Edit</string>
+    <string name="finish">Done</string>
+    <string name="delete">Delete</string>
+    <string name="title">Label</string>
+    <string name="net_message">You have no network links ！</string>
+    <string name="download_finish">Download the complete </string>
+    <string name="downlaoding">Is being downloaded</string>
+    <string name="default_alarm">Default</string>
+    <string name="time_over">When Timer Ends</string>
+    <string name="add_alarm">Add Alarm</string>
+    <string name="sound">Sound</string>
+    <string name="snooze">Snooze</string>
+    <string name="label">Label</string>
+    <string name="dialog_message">Timer Done</string>
+    <string name="search_title">Search for a city to add to world clock.</string>
+    <string name="message">Do you want to experience a iphone4S?Please use the Espier Launcher,and a variety of gestures,smooth sliding,A second make your phone change to iphone!</string>
+    <string name="alarm_notify_text">Snooze or dismiss alarm.</string>
+    <!-- Text to display in the notification ticker and label -->
+      <!-- Text to display in the notification ticker and label -->
+    <string name="alarm_notify_snooze_label"> (snoozed)</string>
+
+    <!-- Text to display in the notification when the alarm has been snoozed -->
+    <string name="alarm_notify_snooze_text">Alarm set for Touch to cancel.</string>
+    <string name="no_world_clock">No world clock</string>
+    <string name="time_zone_name">Beijing</string>
+    <string name="time_zone_name_id">Beijing</string>
+    <string name="timezone">Asia/Shanghai</string>
+    <string name="am_text">AM</string>
+    <string name="pm_text">PM</string>
+    <string name="no_sdcard">The current sd card, not with </string>
+</resources>
+

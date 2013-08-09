@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.espier.clock"
+      android:versionCode="6"
+      android:versionName="2.0.3">
+
+     <uses-sdk android:minSdkVersion="7"  />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission  android:name="android.permission.INTERNET"/>
+    <!-- write sdcard for storing apk -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- espier lib permission -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+
+    <application android:icon="@drawable/ic_app_icon" android:label="@string/app_name" >
+
+        <meta-data
+            android:name="CHANNELID"
+            android:value="EspierClock" />
+        <meta-data
+            android:name="APP_FLAG"
+            android:value="ec" />
+
+        <provider android:name="AlarmProvider" android:authorities="org.espier.clock"></provider>
+
+        <activity android:name="EspierClock" android:configChanges="keyboardHidden|keyboard"
+                  android:screenOrientation="portrait"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTask"
+                  android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="WorldClock"
+            android:screenOrientation="portrait"
+
+             />
+
+        <activity android:name=".AlarmClock"
+            android:screenOrientation="portrait"
+
+             />
+
+        <activity android:name="MoreTab"
+            android:screenOrientation="portrait"
+             />
+
+        <activity android:name="Stopwatch"
+                     android:screenOrientation="portrait"
+
+            />
+        <activity android:name="SearchWroldClock"
+                  android:screenOrientation="portrait"
+
+            />
+
+        <activity android:name=".Timer"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SetAlarmClock"  android:screenOrientation="portrait"
+              />
+        <activity android:name="RepeatWeek" android:screenOrientation="portrait"
+            />
+        <activity android:name="AlarmAlert"
+                android:excludeFromRecents="true"
+                android:theme="@style/alarm_alert"
+                android:launchMode="singleInstance"
+                android:taskAffinity=""
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+         />
+        <activity android:name="AlarmAlertFullScreen"
+                android:excludeFromRecents="true"
+                android:theme="@android:style/Theme.Wallpaper.NoTitleBar"
+                android:launchMode="singleInstance"
+                android:taskAffinity=""
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+         />
+
+        <activity android:name=".TimerAlert"
+                android:excludeFromRecents="true"
+                android:theme="@style/alarm_alert"
+                android:launchMode="singleInstance"
+                android:taskAffinity=""
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+            ></activity>
+
+         <activity android:name="TimerFullScreen"
+                android:excludeFromRecents="true"
+                android:theme="@android:style/Theme.Wallpaper.NoTitleBar"
+                android:launchMode="singleInstance"
+                android:taskAffinity=""
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+         />
+
+        <receiver android:name="org.espier.clock.broadcast.AlarmInitReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="org.espier.clock.broadcast.AlarmReceiver">
+            <intent-filter>
+               <action android:name="org.espier.clock.ALARM_ALERT" />
+               <action android:name="alarm_killed" />
+               <action android:name="cancel_snooze" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="org.espier.clock.broadcast.TimerAlarmReceiver">
+            <intent-filter>
+                <action android:name="org.espier.clock.broadcast.TIMERALARMRECEIVER"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="org.espier.clock.broadcast.AlarmKlaxon">
+            <intent-filter>
+                <action android:name="org.espier.clock.ALARM_ALERT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="org.espier.clock.broadcast.TimerAlarmService">
+        </service>
+    </application>
+
+</manifest>
